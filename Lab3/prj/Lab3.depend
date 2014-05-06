@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1394610302 source:/home/adam/Desktop/Lab3/prj/Lab3/main.cpp
+	<iostream>
+
+1394614986 source:/home/adam/Desktop/Lab3/prj/Lab3/src/dane.cpp
+	"../include/dane.h"
+
+1394614986 /home/adam/Desktop/Lab3/prj/Lab3/include/dane.h
+	<iostream>
+
+1394967894 source:/home/adam/Desktop/Lab3/prj/Lab3/src/stos.cpp
+	"../include/stos.h"
+
+1394967667 /home/adam/Desktop/Lab3/prj/Lab3/include/stos.h
+	<iostream>
+
+1395169713 source:/home/adam/Desktop/PAMSI/Lab3/prj/main.cpp
+	<iostream>
+	"include/stos.h"
+	"src/stos.cpp"
+	"include/kolejka.h"
+	"src/kolejka.cpp"
+	"./include/wykonajEksperyment.h"
+
+1395171602 /home/adam/Desktop/PAMSI/Lab3/prj/include/stos.h
+	<iostream>
+
+1395186962 source:/home/adam/Desktop/PAMSI/Lab3/prj/src/stos.cpp
+	"../include/stos.h"
+
+1395186962 /home/adam/Desktop/PAMSI/Lab3/prj/src/stos.cpp
+	"../include/stos.h"
+
+1395097300 /home/adam/Desktop/PAMSI/Lab3/prj/include/kolejka.h
+
+1395187045 /home/adam/Desktop/PAMSI/Lab3/prj/src/kolejka.cpp
+	"../include/kolejka.h"
+	<iostream>
+
+1395173561 source:/home/adam/Desktop/PAMSI/Lab3/prj/src/kolejka.cpp
+	"../include/kolejka.h"
+	<iostream>
+
+1395185627 source:/home/adam/Desktop/PAMSI/Lab3/prj/src/wykonajEksperyment.cpp
+	"../include/wykonajEksperyment.h"
+
+1395187045 /home/adam/Desktop/PAMSI/Lab3/prj/include/wykonajEksperyment.h
+	<iostream>
+	<fstream>
+	<string>
+	<chrono>
+	"../include/stos.h"
+	"../src/stos.cpp"
+	"../include/kolejka.h"
+	"../src/kolejka.cpp"
+

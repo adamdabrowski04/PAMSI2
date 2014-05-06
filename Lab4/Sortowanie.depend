@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1396390654 source:/home/adam/Desktop/PAMSI/Lab4/prj/main.cpp
+	<iostream>
+	<string>
+	"./include/oblicz.h"
+	"./include/wykonajEksperyment.h"
+
+1396391820 /home/adam/Desktop/PAMSI/Lab4/prj/include/oblicz.h
+	<iostream>
+	<string>
+	<chrono>
+	<fstream>
+	"../include/dane.h"
+
+1395867121 /home/adam/Desktop/PAMSI/Lab4/prj/include/dane.h
+	<iostream>
+	<iomanip>
+	<fstream>
+
+1396393629 /home/adam/Desktop/PAMSI/Lab4/prj/include/wykonajEksperyment.h
+	"../include/oblicz.h"
+	<iostream>
+	<fstream>
+	<random>
+	<string>
+
+1396382179 source:/home/adam/Desktop/PAMSI/Lab4/prj/src/dane.cpp
+	"../include/dane.h"
+
+1396390322 source:/home/adam/Desktop/PAMSI/Lab4/prj/src/oblicz.cpp
+	"../include/oblicz.h"
+	"../include/dane.h"
+
+1396393629 source:/home/adam/Desktop/PAMSI/Lab4/prj/src/wykonajEksperyment.cpp
+	"../include/wykonajEksperyment.h"
+
+1396382207 source:/home/adam/Desktop/PAMSI/Lab4/prj/src/sortowanie.cpp
+	"../include/dane.h"
+
