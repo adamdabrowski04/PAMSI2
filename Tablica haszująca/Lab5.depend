@@ -1,0 +1,101 @@
+# depslib dependency file v1.0
+1396996930 source:/home/adam/Desktop/PAMSI/Lab5/main.cpp
+	<iostream>
+	"include/TabblicaAsocjacyjna.h"
+	"include/Element.h"
+
+1396887077 source:/home/adam/Desktop/PAMSI/Lab5/src/Element.cpp
+	"../include/Element.h"
+
+1396887077 /home/adam/Desktop/PAMSI/Lab5/include/Element.h
+
+1396996908 /home/adam/Desktop/PAMSI/Lab5/include/TabblicaAsocjacyjna.h
+	<list>
+	<iostream>
+	"../include/Element.h"
+
+1401205762 source:/home/adam/Desktop/PAMSI2/Lab5/main.cpp
+	<iostream>
+	"src/TabblicaAsocjacyjna.cpp"
+	"include/Element.h"
+
+1401205702 /home/adam/Desktop/PAMSI2/Lab5/include/TabblicaAsocjacyjna.h
+	<list>
+	<iostream>
+	"../include/Element.h"
+
+1401205679 /home/adam/Desktop/PAMSI2/Lab5/include/Element.h
+
+1401205711 source:/home/adam/Desktop/PAMSI2/Lab5/src/Element.cpp
+	"../include/Element.h"
+
+1401205752 source:/home/adam/Desktop/PAMSI2/Lab5/src/TabblicaAsocjacyjna.cpp
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/Element.cpp"
+
+1401205752 /home/adam/Desktop/PAMSI2/Lab5/src/TabblicaAsocjacyjna.cpp
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/Element.cpp"
+
+1401205711 /home/adam/Desktop/PAMSI2/Lab5/src/Element.cpp
+	"../include/Element.h"
+
+1401205762 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/main.cpp
+	<iostream>
+	"src/TabblicaAsocjacyjna.cpp"
+	"include/Element.h"
+
+1401207061 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/TabblicaAsocjacyjna.cpp
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/Element.cpp"
+
+1401207051 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/include/TabblicaAsocjacyjna.h
+	<list>
+	<vector>
+	<iostream>
+	"../include/Element.h"
+
+1401205679 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/include/Element.h
+
+1401205711 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/Element.cpp
+	"../include/Element.h"
+
+1401205711 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/Element.cpp
+	"../include/Element.h"
+
+1401207061 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/TabblicaAsocjacyjna.cpp
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/Element.cpp"
+
+1401205711 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/Element.cpp
+	"../include/Element.h"
+
+1401223059 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/Element.h
+
+1401222994 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/TabblicaAsocjacyjna.cpp
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/Element.cpp"
+	<cmath>
+	<cstring>
+
+1401220553 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/TabblicaAsocjacyjna.h
+	<list>
+	<vector>
+	<iostream>
+	"../include/Element.h"
+
+1401205711 /home/adam/Desktop/PAMSI2/Tablica haszująca/src/Element.cpp
+	"../include/Element.h"
+
+1401222808 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/main.cpp
+	<iostream>
+	"src/TabblicaAsocjacyjna.cpp"
+	"include/Element.h"
+	<string>
+
+1401222994 /home/adam/Desktop/PAMSI2/Tablica haszująca/src/TabblicaAsocjacyjna.cpp
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/Element.cpp"
+	<cmath>
+	<cstring>
+

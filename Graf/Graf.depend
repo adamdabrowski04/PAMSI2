@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1401243824 source:/home/adam/Desktop/PAMSI2/Graf/main.cpp
+	<iostream>
+	"../include/Graf.h"
+
+1401248704 /home/adam/Desktop/PAMSI2/Graf/include/Graf.h
+	<iostream>
+	<vector>
+	<map>
+	<string>
+	<queue>
+
+1401246781 source:/home/adam/Desktop/PAMSI2/Graf/src/Graf.cpp
+	"../include/Graf.h"
+
