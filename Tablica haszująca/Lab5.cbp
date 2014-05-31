@@ -35,9 +35,11 @@
 		</Compiler>
 		<Unit filename="include/Element.h" />
 		<Unit filename="include/TabblicaAsocjacyjna.h" />
+		<Unit filename="include/wykonajEksperyment.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Element.cpp" />
 		<Unit filename="src/TabblicaAsocjacyjna.cpp" />
+		<Unit filename="src/wykonajEksperyment.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
