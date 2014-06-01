@@ -57,6 +57,7 @@ bool Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::Usun(string Klucz)
     for( typename list<Klucz_i_Element<TYP_KLUCZ, TYP_WARTOSC> >::iterator it=(tablica_list[FunkcjaHaszujaca(Klucz)]).begin();
             it!=(tablica_list[FunkcjaHaszujaca(Klucz)]).end();it++)
     {
+
         if( (*it).Klucz==Klucz )
         {
             (tablica_list[FunkcjaHaszujaca(Klucz)]).erase(it);
@@ -67,7 +68,7 @@ bool Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::Usun(string Klucz)
     return false;
 }
 template<class TYP_KLUCZ, class TYP_WARTOSC>
-TYP_WARTOSC Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::Pobierz(TYP_KLUCZ Klucz)
+TYP_WARTOSC Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::Pobierz(string Klucz)
 {
     for( typename list<Klucz_i_Element<TYP_KLUCZ, TYP_WARTOSC> >::iterator it=(tablica_list[FunkcjaHaszujaca(Klucz)]).begin();
             it!=(tablica_list[FunkcjaHaszujaca(Klucz)]).end();it++)

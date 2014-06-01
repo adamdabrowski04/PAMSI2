@@ -26,27 +26,25 @@ class Tablica_Haszujaca
      *BRAK
      *
      *Warunki końcowe:
-     * Dodaje element do tablicy asocjacyjnej, w przypadku kiedy jest już w niej
-     * element o takim kluczu zastępuje go tym, który chcemy dodać
+     * Wylicza indeks tablicy na podstawie klucza
      *
      *Zwracane Wartośći:
-     *BRAK
+     *Indeks tablicy
      */
     unsigned int FunkcjaHaszujaca(string);
 
     /*!
-     *\brief Dodaje element do listy
+     *\brief Dodaje element do tablicy
      *
      *PRzyjmowane argumenty:
-     * argument1 - klucz będący wartośćią typu int
-     * argument2 - element tablicy asocjacyjnej
+     * argument1 - klucz
+     * argument2 - element do dodania
      *
      *Warunki wtępne:
      *BRAK
      *
      *Warunki końcowe:
-     * Dodaje element do tablicy asocjacyjnej, w przypadku kiedy jest już w niej
-     * element o takim kluczu zastępuje go tym, który chcemy dodać
+     * Dodaje element do tablicy haszującej
      *
      *Zwracane Wartośći:
      *BRAK
@@ -67,7 +65,7 @@ class Tablica_Haszujaca
      *
      *Zwracane Wartośći:
      *true- w przypadku powodzenia
-     *false - w przypadku porażki
+     *false - w przypadku porażki(brak elementu tego typu)
      */
     bool Usun(string);
 
@@ -81,13 +79,13 @@ class Tablica_Haszujaca
      *musi istnieć element o podanym kluczu
      *
      *Warunki końcowe:
-     *Zwraca element z podanymdanym kluczu z tablicy asocjacyjnej
+     *Zwraca element z podanymdanym kluczu
      ***UWAGA*** nie usuwa tego elementu z tablicy
      *
      *Zwracane Wartośći:
-     *Elemnt o podanym klluczu
+     *Elemnt o podanym kluczu
      */
-    TYP_WARTOSC Pobierz(TYP_KLUCZ);
+    TYP_WARTOSC Pobierz(string);
 
 
     /*!
@@ -123,9 +121,6 @@ class Tablica_Haszujaca
      * liczba elemntow w tablicy
      */
     int ZliczElementy();
-    //TODO (adam#5#)    iterator
-
-
 
         Tablica_Haszujaca(unsigned long int liczba_elementow);
         ~Tablica_Haszujaca();
@@ -133,5 +128,4 @@ class Tablica_Haszujaca
 
     private:
 };
-
 #endif // TABBLICAASOCJACYJNA_H

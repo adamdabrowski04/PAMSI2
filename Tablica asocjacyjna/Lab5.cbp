@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -34,12 +35,10 @@
 		</Compiler>
 		<Unit filename="include/Element.h" />
 		<Unit filename="include/TabblicaAsocjacyjna.h" />
-		<Unit filename="include/oblicz.h" />
 		<Unit filename="include/wykonajEksperyment.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Element.cpp" />
 		<Unit filename="src/TabblicaAsocjacyjna.cpp" />
-		<Unit filename="src/oblicz.cpp" />
 		<Unit filename="src/wykonajEksperyment.cpp" />
 		<Extensions>
 			<code_completion />

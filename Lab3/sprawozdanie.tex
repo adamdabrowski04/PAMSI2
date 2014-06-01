@@ -31,14 +31,9 @@ ilosc elementow & czas - nano sekundy\\
 10000&11008400\\
 \hline
 \end{tabular}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/stos_o_jeden.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
+\newline
+\newline
+\newline
 \begin{tabular}{|rl|}
 \hline
 \multicolumn{2}{|c|}{powiększanie dwa razy}\\
@@ -53,14 +48,24 @@ ilosc elementow & czas - nano sekundy\\
 100000&2648233\\
 \hline
 \end{tabular}
+\newline
+\newline
+%\newpage
+%\begin{figure}
+ % \begin{center}
+    \includegraphics[scale=0.5, angle=270]{wykresy/stos_o_jeden.eps}
+   % \caption{}
+    %\label{fig:}
+  %\end{center}
+%\end{figure}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/stos_x_dwa.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
+%\begin{figure}
+ % \begin{center}
+    \includegraphics[scale=0.5, angle=270]{wykresy/stos_x_dwa.eps}
+  % \caption{}
+    %\label{fig:}
+%  \end{center}
+%\end{figure}
 
 \section{KOLEJKA}
 \begin{tabular}{|rl|}
@@ -76,15 +81,8 @@ ilosc elementow & czas - nano sekundy\\
 10000&1424870\\
 \hline
 \end{tabular}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/kolejka_o_jeden.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
-
+\newline
+\newline
 \begin{tabular}{|rl|}
 \hline
 \multicolumn{2}{|c|}{powiększanie dwa razy}\\
@@ -99,14 +97,13 @@ ilosc elementow & czas - nano sekundy\\
 100000&2992501\\
 \hline
 \end{tabular}
+\newline
+\newline
+%\newpage
+\includegraphics[scale=0.55, angle=270]{wykresy/kolejka_o_jeden.eps}
+\newline
+\includegraphics[scale=0.55, angle=270]{wykresy/kolejka_x_dwa.eps}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/kolejka_x_dwa.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
 
 \section{Wnioski}
 Powiększanie tablicy o jeden w obu wypadkach jest najgorszym rozwiązaniem z możliwych. W wariancie z powiększaniem o jeden element musiałem zmniejszyć liczbę danych o rząd ponieważ komputer nie mógł ukończyć tego programu - po dwudziestu minutach na siłę wyłączyłem program.

@@ -1,9 +1,14 @@
 #include "../include/wykonajEksperyment.h"
-
+#include<cmath>
+#include<chrono>
 using namespace std;
 wykonajEksperyment::wykonajEksperyment()
 {
-    //ctor
+    pTabCzasyKolejnychSeriiDanych=new long double[rozmiarTabIlosciDanych];
+    pTabIloscDanych= new unsigned  int[rozmiarTabIlosciDanych];
+    for(unsigned int i=0;i<rozmiarTabIlosciDanych;i++)
+        pTabIloscDanych[i]=pow(10, i);
+
 }
 
 wykonajEksperyment::~wykonajEksperyment()
@@ -13,82 +18,141 @@ wykonajEksperyment::~wykonajEksperyment()
 
 void wykonajEksperyment::test()
 {
-
-    for(int i=0; i<LICZBAPRZEBIEGOW;i++)
+    ofstream oStrm;
+    string nazwaPliku;
+        switch(wyborPojemnika)
     {
-  //liczydlo.TabWyliczona=liczydlo.TabDanych;
-
-//    ofstream plik2;
-//    string nazwa2="wejscie";
-//    nazwa2+= to_string(i);
-//    plik2.open(nazwa2);
-//    plik2<<liczydlo.TabWyliczona;
-//    plik2.close();
-
-        czasyRealizacji[i]=liczydlo.wykonajObliczenia();
-
-//    ofstream plik;
-//    string nazwa="wynik";
-//    nazwa+= to_string(i);
-//    plik.open(nazwa);
-//    plik<<liczydlo.TabWyliczona;
-//    plik.close();
-
-        sredniCzas+=static_cast<double>(czasyRealizacji[i]/LICZBAPRZEBIEGOW);
-        liczbaBledow[i]=liczydlo.wykonajSprawdzenie();
-        sumaBledow+=liczbaBledow[i];
-       }
-
-
+    case WCZYTYWANIE:
+       nazwaPliku="Wczytywanie_";
+       break;
+    case WYSZUKIWANIE:
+         nazwaPliku="Wyszukiwanie_";
+        break;
+    default:
+        cerr<<"Nie istnieje taka funkcja do sprawdzenia"<<endl;
+        break;
+    }
+    nazwaPliku+="IlosciDanych10^";
+    nazwaPliku+=to_string(rozmiarTabIlosciDanych);
+    nazwaPliku+="_liczbaWywolan_";
+    nazwaPliku+=to_string(liczbaWywolan);
+    nazwaPliku+=".csv";
+    oStrm.open(nazwaPliku);
+    for(unsigned int i=0; i<rozmiarTabIlosciDanych;i++)
+    {
+        pTabCzasyKolejnychSeriiDanych[i]=this->seriaPomiarow(liczbaWywolan, pTabIloscDanych[i] );
+        //oStrm.width(10);
+        oStrm<<pTabIloscDanych[i]<<" "<<pTabCzasyKolejnychSeriiDanych[i]<<endl;
+        cout.width(10);
+        cout<<pTabIloscDanych[i]<<"  "<<pTabCzasyKolejnychSeriiDanych[i]<<endl;
+    }
+    oStrm.close();
 }
 
 
+unsigned int wykonajEksperyment::seriaPomiarow(unsigned int liczbaWywolan, unsigned int iloscDanych)
+{
+    long double sredniCzas=0;
+    for(unsigned int i=0; i<liczbaWywolan; i++)
+    {
+        sredniCzas+=this->zmierzCzasTrwania(iloscDanych)/liczbaWywolan;
+    }
+    return sredniCzas;
+}
 
+double wykonajEksperyment::zmierzCzasTrwania(unsigned int iloscDanych)
+{
+    Tablica_Asocjacyjna<string, int> slownik;
+        if(wyborPojemnika==WYSZUKIWANIE)Wczytywanie(iloscDanych, slownik);
+    typedef std::chrono::high_resolution_clock high_resolution_clock;
+    typedef std::chrono::microseconds microseconds;
+    high_resolution_clock::time_point start, koniec;
+    microseconds czasTrwaniaObliczen;
+    start=high_resolution_clock::now();
+    switch(wyborPojemnika)
+    {
+    case WCZYTYWANIE:
+       Wczytywanie(iloscDanych, slownik);
+       break;
+    case WYSZUKIWANIE:
 
-void wygenerujDaneTestowe(const int ILOSCDANYCH)
+         Wyszukiwanie(iloscDanych,slownik);
+       //  cout<<"Wybor pojemnika switch error"<<endl;
+        break;
+    default:
+        cerr<<"Nie istnieje taka funkcja do sprawdzenia"<<endl;
+        break;
+    }
+    koniec=high_resolution_clock::now();
+    czasTrwaniaObliczen=std::chrono::duration_cast<microseconds>(koniec - start);
+    return czasTrwaniaObliczen.count();
+}
+
+void wykonajEksperyment::Wczytywanie(unsigned int iloscDanych, Tablica_Asocjacyjna<string, int> & slownik)
+{
+    ifstream StrmWe;
+    StrmWe.open("baza_danych.txt");
+    string slowo;
+
+    for(unsigned int i=0; i<iloscDanych;i++)
+    {
+        StrmWe>>slowo;
+        slownik.Dodaj(slowo,i);
+    }
+
+    StrmWe.close();
+}
+
+void wykonajEksperyment::Wyszukiwanie(unsigned int iloscDanych, Tablica_Asocjacyjna<string, int> & slownik)
 {
 
-    ofstream streamDane, streamSprawdzenie;
+    ifstream StrmWe;
+    StrmWe.open("baza_danych.txt");
+    string slowo;
 
-    streamDane.open("dane");
-    streamSprawdzenie.open("sprawdzenie");
-
-    streamSprawdzenie<<ILOSCDANYCH<<endl;
-    for(int i=POCZATEK_NUMERACJI;i<POCZATEK_NUMERACJI+ILOSCDANYCH;i++)
+    for(unsigned int i=0; i<iloscDanych;i++)
     {
-        streamSprawdzenie<<i<<endl;
-    }
-    /*!
-     *
-     *Genereuję tablicę danych w której następnie poprestawiam
-     *   liczby z użyciem generatora liczb pseudolosowyc
-     *
-     */
-    int *pTab=new int[ILOSCDANYCH];
-    for(int i=POCZATEK_NUMERACJI;i<POCZATEK_NUMERACJI+ILOSCDANYCH;i++)
-    {
-        pTab[i-POCZATEK_NUMERACJI]=i;
-    }
-    default_random_engine generator;
-    uniform_int_distribution<int> distribution(0,ILOSCDANYCH-1);
-
-    for(int i=0;i<ILOSCDANYCH/2;i++)
-    {
-        int indeks1=distribution(generator);
-        int indeks2=distribution(generator);
-        int tmp;
-        tmp=pTab[indeks1];
-        pTab[indeks1]=pTab[indeks2];
-        pTab[indeks2]=tmp;
+        StrmWe>>slowo;
+        slownik.Pobierz(slowo);
     }
 
-    streamDane<<ILOSCDANYCH<<endl;
-    for(int i=0;i<ILOSCDANYCH;i++)
-    {
-        streamDane<<pTab[i]<<endl;
-    }
-    delete[](pTab);
-    streamDane.close();
-    streamSprawdzenie.close();
+    StrmWe.close();
 
 }
+
+template<class TYP>
+TYP potega(TYP liczba, unsigned int wykladnik)
+ {
+    TYP wynik=1;
+    for(unsigned int i=0; i<wykladnik;i++)
+    {
+        wynik*=liczba;
+    }
+    return wynik;
+ }
+
+//
+//void wykonajEksperyment::wygenerujDaneTestowe()
+//{
+//
+//    ofstream streamDane, streamSprawdzenie;
+//
+//    streamDane.open("dane");
+//    streamSprawdzenie.open("sprawdzenie");
+//
+//    streamDane<<ILOSCDANYCH<<endl;
+//    for(int i=POCZATEK_NUMERACJI;i<POCZATEK_NUMERACJI+ILOSCDANYCH;i++)
+//    {
+//        streamDane<<i<<endl;
+//    }
+//
+//    streamSprawdzenie<<ILOSCDANYCH<<endl;
+//    for(int i=POCZATEK_NUMERACJI;i<POCZATEK_NUMERACJI+ILOSCDANYCH;i++)
+//    {
+//        streamSprawdzenie<<i*2<<endl;
+//    }
+//
+//    streamDane.close();
+//    streamSprawdzenie.close();
+//
+//}

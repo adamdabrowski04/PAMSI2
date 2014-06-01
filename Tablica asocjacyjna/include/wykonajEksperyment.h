@@ -11,33 +11,64 @@
  */
 
 
-
-#include "../include/oblicz.h"
 #include <iostream>
 #include <fstream>
-#include<random>
-#include<string>
+#include <string>
+#include<chrono>
+#include "../include/TabblicaAsocjacyjna.h"
+#include "../src/TabblicaAsocjacyjna.cpp"
+//#include "../include/Element.h"
+//#include "../src/Element.cpp"
 
-const int POCZATEK_NUMERACJI=1;
-const int LICZBAPRZEBIEGOW = 20;
+
 
 class wykonajEksperyment
 {
 
     public:
-    int czasyRealizacji[LICZBAPRZEBIEGOW];
-    double sredniCzas=0;
-    int liczbaBledow[LICZBAPRZEBIEGOW];
-    int sumaBledow=0;
-        oblicz liczydlo;  //obiekt zawierajacy dane i przeprowadzajacy test
-        void test();
-         wykonajEksperyment();
-        ~wykonajEksperyment();
-    dane wyniki;
+    enum TypFunkcji{WCZYTYWANIE, WYSZUKIWANIE};
+     TypFunkcji wyborPojemnika = WCZYTYWANIE;
+    const unsigned int  rozmiarTabIlosciDanych=6;
+    const unsigned int liczbaWywolan=300;
+    unsigned int *pTabIloscDanych;
+    long double *pTabCzasyKolejnychSeriiDanych;
 
+    void test();
+
+    /*!
+     *\brief wywoluje kilkukrotnie funkcje badajaca czas trwania badanego algorytmu
+     *
+     *Wywoluje kilkukrotnie funkcje mierzaca czas trwania badanego algorytmu po czym zwraca sredni czas trwania
+     *
+     *ARGUMENTY: liczbaWywolan - liczba wywolan badanej funkcji( mierzony jest czas pojedynczego wywolania)
+     *           iloscDanych   - ilosc danych kladzionych na stos\kolejke
+     */
+    unsigned int seriaPomiarow(unsigned int liczbaWywolan, unsigned int iloscDanych);
+    /*!
+     *\brief Wywałanie rozwiązania aktualnie badanego problemu
+     *
+     *PARAMETRY: liczbaDanych - liczba danych dla jakich badamy problem, w tym wypadku jest to liczba elementów kładzionych na stos lub kolejkę
+     */
+    void Wczytywanie(unsigned int liczbaDanych, Tablica_Asocjacyjna<string, int> & slownik);
+        /*!
+     *\brief Wywałanie rozwiązania aktualnie badanego problemu
+     *
+     *PARAMETRY: liczbaDanych - liczba danych dla jakich badamy problem, w tym wypadku jest to liczba elementów kładzionych na stos lub kolejkę
+     */
+    void Wyszukiwanie(unsigned int liczbaDanych, Tablica_Asocjacyjna<string, int> & slownik);
+    /*!
+     *
+     * Alokuje pamiec i inicjalizuje tabelę pTabIloscDanych kolejnymi potęgami 10 przy czym pierwszy element=50
+     *
+     */
+    wykonajEksperyment();
+        ~wykonajEksperyment();
+//    void wygenerujDaneTestowe();
+    double zmierzCzasTrwania(unsigned int);
 
     protected:
     private:
 };
-    void wygenerujDaneTestowe(const int ILOSCDANYCH=10);
+template<class TYP>
+TYP potega(TYP, unsigned int );
 #endif // WYKONAJEKSPERYMENT_H

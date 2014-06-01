@@ -61,35 +61,38 @@ unsigned int wykonajEksperyment::seriaPomiarow(unsigned int liczbaWywolan, unsig
 
 double wykonajEksperyment::zmierzCzasTrwania(unsigned int iloscDanych)
 {
+    Tablica_Haszujaca<string, int> slownik(iloscDanych);
+        if(wyborPojemnika==WYSZUKIWANIE)Wczytywanie(iloscDanych, slownik);
     typedef std::chrono::high_resolution_clock high_resolution_clock;
-    typedef std::chrono::nanoseconds nanoseconds;
+    typedef std::chrono::microseconds microseconds;
     high_resolution_clock::time_point start, koniec;
-    nanoseconds czasTrwaniaObliczen;
+    microseconds czasTrwaniaObliczen;
     start=high_resolution_clock::now();
     switch(wyborPojemnika)
     {
     case WCZYTYWANIE:
-       Wczytywanie(iloscDanych);
+       Wczytywanie(iloscDanych, slownik);
        break;
     case WYSZUKIWANIE:
-         //uruchomStos(iloscDanych);
-         cout<<"Wybor pojemnika switch error"<<endl;
+
+         Wyszukiwanie(iloscDanych,slownik);
+       //  cout<<"Wybor pojemnika switch error"<<endl;
         break;
     default:
         cerr<<"Nie istnieje taka funkcja do sprawdzenia"<<endl;
         break;
     }
     koniec=high_resolution_clock::now();
-    czasTrwaniaObliczen=std::chrono::duration_cast<nanoseconds>(koniec - start);
+    czasTrwaniaObliczen=std::chrono::duration_cast<microseconds>(koniec - start);
     return czasTrwaniaObliczen.count();
 }
 
-void wykonajEksperyment::Wczytywanie(unsigned int iloscDanych)
+void wykonajEksperyment::Wczytywanie(unsigned int iloscDanych, Tablica_Haszujaca<string, int> & slownik)
 {
     ifstream StrmWe;
     StrmWe.open("baza_danych.txt");
     string slowo;
-        Tablica_Haszujaca<string, int> slownik(iloscDanych);
+
     for(unsigned int i=0; i<iloscDanych;i++)
     {
         StrmWe>>slowo;
@@ -99,19 +102,22 @@ void wykonajEksperyment::Wczytywanie(unsigned int iloscDanych)
     StrmWe.close();
 }
 
-//void wykonajEksperyment::Wyszukiwanie(unsigned int iloscDanych)
-//{
-//
-//    for(unsigned int i=0; i<iloscDanych;i++)
-//    {
-//        biurko.PUSH(i);
-//    }
-//        for(unsigned int j=0; j<iloscDanych;j++)
-//    {
-//        biurko.POP();
-//    }
-//
-//}
+void wykonajEksperyment::Wyszukiwanie(unsigned int iloscDanych, Tablica_Haszujaca<string, int> & slownik)
+{
+
+    ifstream StrmWe;
+    StrmWe.open("baza_danych.txt");
+    string slowo;
+
+    for(unsigned int i=0; i<iloscDanych;i++)
+    {
+        StrmWe>>slowo;
+        slownik.Pobierz(slowo);
+    }
+
+    StrmWe.close();
+
+}
 
 template<class TYP>
 TYP potega(TYP liczba, unsigned int wykladnik)

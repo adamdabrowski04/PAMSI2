@@ -24,10 +24,11 @@
 
 class wykonajEksperyment
 {
-    enum TypFunkcji{WCZYTYWANIE, WYSZUKIWANIE};
+
     public:
-    const TypFunkcji wyborPojemnika = WCZYTYWANIE;
-    const unsigned int  rozmiarTabIlosciDanych=3;
+    enum TypFunkcji{WCZYTYWANIE, WYSZUKIWANIE};
+     TypFunkcji wyborPojemnika = WCZYTYWANIE;
+    const unsigned int  rozmiarTabIlosciDanych=7;
     const unsigned int liczbaWywolan=300;
     unsigned int *pTabIloscDanych;
     long double *pTabCzasyKolejnychSeriiDanych;
@@ -48,13 +49,13 @@ class wykonajEksperyment
      *
      *PARAMETRY: liczbaDanych - liczba danych dla jakich badamy problem, w tym wypadku jest to liczba elementów kładzionych na stos lub kolejkę
      */
-    void Wczytywanie(unsigned int liczbaDanych);
+    void Wczytywanie(unsigned int liczbaDanych, Tablica_Haszujaca<string, int> & slownik);
         /*!
      *\brief Wywałanie rozwiązania aktualnie badanego problemu
      *
      *PARAMETRY: liczbaDanych - liczba danych dla jakich badamy problem, w tym wypadku jest to liczba elementów kładzionych na stos lub kolejkę
      */
-    void uruchomStos(unsigned int liczbaDanych);
+    void Wyszukiwanie(unsigned int liczbaDanych, Tablica_Haszujaca<string, int> & slownik);
     /*!
      *
      * Alokuje pamiec i inicjalizuje tabelę pTabIloscDanych kolejnymi potęgami 10 przy czym pierwszy element=50

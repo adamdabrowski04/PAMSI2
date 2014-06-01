@@ -2,14 +2,17 @@
 #include <iostream>
 #include "src/TabblicaAsocjacyjna.cpp"
 #include "include/Element.h"
+#include "include/wykonajEksperyment.h"
 
 
 using namespace std;
 
 int main()
 {
-Tablica_Asocjacyjna<int, int> tab;
-tab.Dodaj(12,112);
-    cout << "Hello world!" << tab.Pobierz(12)<<endl;
+    wykonajEksperyment aa;
+    aa.wyborPojemnika = wykonajEksperyment::WCZYTYWANIE;
+    aa.test();
+    aa.wyborPojemnika= wykonajEksperyment::WYSZUKIWANIE;
+    aa.test();
     return 0;
 }

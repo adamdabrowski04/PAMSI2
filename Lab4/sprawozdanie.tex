@@ -8,13 +8,14 @@
 \author{Adam Dąbrowski 184208}
 \begin{document}
 \maketitle
-\section{Wprowadzenie}
+\chapter{Wprowadzenie}
 
 Celem ćwiczenia było zapoznanie się z różnymi typami sortowania. Ja zaimplementowałem heapsort i quicksort. Oba te algorymtmy sortują w miejscu to znaczy nie wymagają żadnej dodatkowej struktury danych.  
 
-\section{Realizacjia}
+\chapter{Realizacjia}
 
-Program sprawdzam kolejno dla wielkości problemu 10, 100 ,1000,10 000, 100 000. Sortowanie przeprowadzam 50 razy, przy tej liczbie przy prawie każdym uruchomieniu dostaję podobne wyniki, a następnie liczę z tego średni czas. Dobrym punktem odniesienie przy analizie algorytmów sortowania jest podstawowe sortowanie bąbelkowe, ponieważ po kolei przestawia w tablicy wszystkie elementy- dlatego też swoją pracę zacząłem od napisanie tego tego typu sortowania. 
+Program sprawdzam kolejno dla wielkości problemu 10, 100 ,1000,10 000, 100 000. Sortowanie przeprowadzam 50 razy, przy tej liczbie przy prawie każdym uruchomieniu dostaję podobne wyniki, a następnie liczę z tego średni czas. Dobrym punktem odniesienie przy analizie algorytmów sortowania jest sortowanie bąbelkowe, ponieważ po kolei sprawdza wszystkie elementy tablicy, dlatego też swoją pracę zacząłem od napisanie implementacji tego algorytmu.
+\newpage 
 \section{HEAPSORT}
 
 Złożoność obliczeniowa\\
@@ -25,7 +26,7 @@ Funkcja maxHeapify każde z n-1 wywołań - $O(lgn)$\\
 \hline
 \multicolumn{2}{|c|}{HEAPSORT}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 10&4099\\
 100&41165\\
@@ -35,17 +36,18 @@ ilosc elementow & czas - nano sekundy\\
 \hline
 \end{tabular}
 \\
+\includegraphics[angle=270, scale = 0.5]{wykresy/heapsort.eps}
+\newpage
 \section{QUICKSORT}
 Złożoność obliczeniowa w wypadku funkcji quicksort bardzo mocno zależy od danych wejśćiowych\\ 
 W najgorszym wypadku-dane już posortowane $O(n^{2})$
 Jednak zazwyczaj jest to $O(n lgn)$
   
-\newpage
 \begin{tabular}{|rl|}
 \hline
 \multicolumn{2}{|c|}{QUICKSORT- przypadek średni}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 10&1725\\
 100&26031\\
@@ -56,21 +58,13 @@ ilosc elementow & czas - nano sekundy\\
 10000000&333791008\\
 \hline
 \end{tabular}
-\\
-
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/heapsort.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
-
+\newline
+\newline
 \begin{tabular}{|rl|}
 \hline
 \multicolumn{2}{|c|}{QUICKSORT- przypadek najgorszy}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 10&5035\\
 100&334191\\
@@ -79,16 +73,8 @@ ilosc elementow & czas - nano sekundy\\
 \hline
 \end{tabular}
 \\
-
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/quicksort.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
-
-
+\includegraphics[angle=270, scale = 0.5]{wykresy/quicksort.eps}
+\newpage
 \section{BUBBLESORT}
 
 Złożoność obliczeniowa - $O(n^{2})$
@@ -97,7 +83,7 @@ Złożoność obliczeniowa - $O(n^{2})$
 \hline
 \multicolumn{2}{|c|}{BUBBLESORT}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 10&3878\\
 100&186381\\
@@ -106,15 +92,11 @@ ilosc elementow & czas - nano sekundy\\
 \hline
 \end{tabular}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics{wykresy/bubblesort.eps}
-    \caption{}
-    \label{fig:}
-  \end{center}
-\end{figure}
+
+\includegraphics[angle=270, scale = 0.5]{wykresy/bubblesort.eps}
 
 
-\section{Wnioski}
-Quicksort w najgorszym wypadku podobnie jak bubblesort ma złożoność obliczeniową $O(n^{2})$, jednak dla przypadku średniego jest to $O(n lgn)$. Potwierdzają to otrzymane czasy realizacji gdzie quicksort(przypadek średni) byłem w stanie wywołać dla $n=10^{7}$ a bubblesort już tylko dla $n=10^{4}$. Dla przypadku najgorszego quickosrt otrzymane czasy realizacji były gorsze niż dla sortowania bąbelkowego. Czasy realizacji dla algorytmu heapsort zgodnie z założeniami teoretycznymi są bardzo zbliżone do tych quickort'a dla przypadku średniego.
+
+\chapter{Wnioski}
+Quicksort w najgorszym wypadku podobnie jak bubblesort ma złożoność obliczeniową $O(n^{2})$, jednak dla przypadku średniego jest to $O(n lgn)$. Potwierdzają to otrzymane czasy realizacji gdzie quicksort(przypadek średni) byłem w stanie wywołać dla $n=10^{7}$ a bubblesort już tylko dla $n=10^{4}$. Dla przypadku najgorszego quickosrt otrzymane czasy realizacji były gorsze niż dla sortowania bąbelkowego. Czasy realizacji dla algorytmu heapsort zgodnie z założeniami teoretycznymi są bardzo zbliżone do quickort'a dla przypadku średniego.
 \end{document}

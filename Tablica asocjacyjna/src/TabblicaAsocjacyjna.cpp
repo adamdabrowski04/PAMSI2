@@ -1,3 +1,5 @@
+#ifndef TABBLICAASOCJACYJNA_CPP
+#define TABBLICAASOCJACYJNA_CPP
 #include "../include/TabblicaAsocjacyjna.h"
 #include "../src/Element.cpp"
 using namespace std;
@@ -56,3 +58,4 @@ int Tablica_Asocjacyjna<TYP_KLUCZ, TYP_WARTOSC>::Zlicz_Elementy()
     return Lista.size();
 }
 //int Zlicz_Elementy();
+#endif

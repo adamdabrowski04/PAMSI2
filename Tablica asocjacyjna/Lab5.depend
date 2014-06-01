@@ -40,12 +40,13 @@
 1401205711 /home/adam/Desktop/PAMSI2/Lab5/src/Element.cpp
 	"../include/Element.h"
 
-1401205762 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/main.cpp
+1401648277 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/main.cpp
 	<iostream>
 	"src/TabblicaAsocjacyjna.cpp"
 	"include/Element.h"
+	"include/wykonajEksperyment.h"
 
-1401207061 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/TabblicaAsocjacyjna.cpp
+1401647997 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/TabblicaAsocjacyjna.cpp
 	"../include/TabblicaAsocjacyjna.h"
 	"../src/Element.cpp"
 
@@ -57,13 +58,42 @@
 
 1401205679 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/include/Element.h
 
-1401205711 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/Element.cpp
+1401647970 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/Element.cpp
 	"../include/Element.h"
 
-1401205711 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/Element.cpp
+1401647970 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/Element.cpp
 	"../include/Element.h"
 
-1401207061 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/TabblicaAsocjacyjna.cpp
+1401647997 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/TabblicaAsocjacyjna.cpp
 	"../include/TabblicaAsocjacyjna.h"
 	"../src/Element.cpp"
+
+1401607547 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/oblicz.cpp
+	"../include/oblicz.h"
+	"../include/dane.h"
+
+1401607547 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/include/oblicz.h
+	<iostream>
+	<string>
+	<chrono>
+	<fstream>
+	"../include/dane.h"
+
+1395867121 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/include/dane.h
+	<iostream>
+	<iomanip>
+	<fstream>
+
+1401647823 source:/home/adam/Desktop/PAMSI2/Tablica asocjacyjna/src/wykonajEksperyment.cpp
+	"../include/wykonajEksperyment.h"
+	<cmath>
+	<chrono>
+
+1401647898 /home/adam/Desktop/PAMSI2/Tablica asocjacyjna/include/wykonajEksperyment.h
+	<iostream>
+	<fstream>
+	<string>
+	<chrono>
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/TabblicaAsocjacyjna.cpp"
 
