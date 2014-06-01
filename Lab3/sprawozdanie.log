@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.1)  1 JUN 2014 18:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.1)  2 JUN 2014 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -425,7 +425,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 10.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Chapter 1.
+[1
+
+]
+Chapter 2.
+[2
+
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 21.
 Package epstopdf Info: Source file: <wykresy/stos_o_jeden.eps>
@@ -439,8 +447,7 @@ Package epstopdf Info: Source file: <wykresy/stos_o_jeden.eps>
 onverted-to.pdf wykresy/stos_o_jeden.eps>
 (epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
-
-<wykresy/stos_o_jeden-eps-converted-to.pdf, id=12, 505.89pt x 722.7pt>
+ <wykresy/stos_o_jeden-eps-converted-to.pdf, id=15, 505.89pt x 722.7pt>
 File: wykresy/stos_o_jeden-eps-converted-to.pdf Graphic file (type pdf)
 
 <use wykresy/stos_o_jeden-eps-converted-to.pdf>
@@ -477,7 +484,7 @@ Package epstopdf Info: Source file: <wykresy/stos_x_dwa.eps>
 verted-to.pdf wykresy/stos_x_dwa.eps>
 (epstopdf)             \includegraphics on input line 64.
 Package epstopdf Info: Output file is already uptodate.
-<wykresy/stos_x_dwa-eps-converted-to.pdf, id=13, 505.89pt x 722.7pt>
+<wykresy/stos_x_dwa-eps-converted-to.pdf, id=16, 505.89pt x 722.7pt>
 File: wykresy/stos_x_dwa-eps-converted-to.pdf Graphic file (type pdf)
 
 <use wykresy/stos_x_dwa-eps-converted-to.pdf>
@@ -489,7 +496,7 @@ Overfull \hbox (18.3491pt too wide) in paragraph at lines 64--69
 [][] 
  []
 
-[2 <./wykresy/stos_o_jeden-eps-converted-to.pdf>]
+[3 <./wykresy/stos_o_jeden-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <wykresy/kolejka_o_jeden.eps>
 (epstopdf)                    date: 2014-05-06 21:59:56
 (epstopdf)                    size: 21229 bytes
@@ -502,7 +509,7 @@ s-converted-to.pdf wykresy/kolejka_o_jeden.eps>
 (epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
 
-<wykresy/kolejka_o_jeden-eps-converted-to.pdf, id=172, 505.89pt x 722.7pt>
+<wykresy/kolejka_o_jeden-eps-converted-to.pdf, id=175, 505.89pt x 722.7pt>
 File: wykresy/kolejka_o_jeden-eps-converted-to.pdf Graphic file (type pdf)
 
 <use wykresy/kolejka_o_jeden-eps-converted-to.pdf>
@@ -521,7 +528,7 @@ converted-to.pdf wykresy/kolejka_x_dwa.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<wykresy/kolejka_x_dwa-eps-converted-to.pdf, id=173, 505.89pt x 722.7pt>
+<wykresy/kolejka_x_dwa-eps-converted-to.pdf, id=176, 505.89pt x 722.7pt>
 File: wykresy/kolejka_x_dwa-eps-converted-to.pdf Graphic file (type pdf)
 
 <use wykresy/kolejka_x_dwa-eps-converted-to.pdf>
@@ -548,30 +555,33 @@ Overfull \hbox (37.48622pt too wide) in paragraph at lines 71--106
 [] 
  []
 
-[3 <./wykresy/stos_x_dwa-eps-converted-to.pdf>]
+[4 <./wykresy/stos_x_dwa-eps-converted-to.pdf>] [5 <./wykresy/kolejka_o_jeden-e
+ps-converted-to.pdf> <./wykresy/kolejka_x_dwa-eps-converted-to.pdf>]
+Chapter 3.
+
 Overfull \hbox (2.3528pt too wide) in paragraph at lines 109--111
 \T1/lmr/m/n/10.95 Powi¦kszanie tabl-icy o je-den w obu wypad-kach jest na-j-gor
 szym rozwi¡zaniem
  []
 
-[4 <./wykresy/kolejka_o_jeden-eps-converted-to.pdf> <./wykresy/kolejka_x_dwa-ep
-s-converted-to.pdf>] [5] (./sprawozdanie.aux) ) 
+[6
+
+] (./sprawozdanie.aux) ) 
 Here is how much of TeX's memory you used:
- 2048 strings out of 494985
- 28152 string characters out of 6180357
+ 2053 strings out of 494985
+ 28214 string characters out of 6180357
  78550 words of memory out of 5000000
- 5225 multiletter control sequences out of 15000+600000
- 37338 words of font info for 35 fonts, out of 8000000 for 9000
+ 5230 multiletter control sequences out of 15000+600000
+ 46349 words of font info for 38 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  37i,7n,24p,724b,190s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-r12.pfb>
-Output written on sprawozdanie.pdf (6 pages, 247300 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/sh
+are/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
+Output written on sprawozdanie.pdf (7 pages, 247630 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 215 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

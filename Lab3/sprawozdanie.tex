@@ -8,11 +8,11 @@
 \author{Adam Dąbrowski 184208}
 \begin{document}
 \maketitle
-\section{Wprowadzenie}
+\chapter{Wprowadzenie}
 
 Celem ćwiczenia było zapoznanie się z klasmi pojemnikowymi - stosem i kolejką. Stos jest to pojemnik typu LIFO(last in first out) ostatni element jaki kładziemy na stos zdejmujemy z niego jako pierwszy. Kolejka jest to pojemnik typu FIFO(first in first out) wyjmujemy z niej elementy w takiej samej kolejności w jakiej wczytywaliśmy.  
 
-\section{Realizacjia}
+\chapter{Realizacjia}
 
 Oba te pojemniki napisałem w oparciu o tablicę dynamiczną. Ważną kwestią jest tutaj zarządzanie pamięcią tak, żeby bez potrzeby jej nie marnować. 
 Zarówno w stosie jak i w kolejce przetestowałem dwa sobosoby alokowania pamięci: dwukrotne powiększanie rozmiaru tablicy i mozolne rozszerzanie o jeden element. W przypadku kolejki zanim zwiększę jej rozmiar sprawdzam czy mogę przesunąć wszystkie elementy do przodu, robiąc w ten sposób miejsce na kolejne. W obu przypadkach pojemniki zmniejszam o połowę wtedy kiedy dane wypełniają pojemnik w jednej czwartej. Program sprawdzam wkładając, a następnie wyjmując kolejno 1, 10, 100 ,1000,10 000, 100 000 liczb typu całkowitego. Operacje te przeprowadzam 300 razy, przy tej liczbie przy prawie każdym uruchomieniu dostaję podobne wyniki, a następnie liczę z tego średni czas. 
@@ -22,7 +22,7 @@ Zarówno w stosie jak i w kolejce przetestowałem dwa sobosoby alokowania pamię
 \hline
 \multicolumn{2}{|c|}{powiększanie o jeden}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 1&437\\
 10&3809\\
@@ -38,7 +38,7 @@ ilosc elementow & czas - nano sekundy\\
 \hline
 \multicolumn{2}{|c|}{powiększanie dwa razy}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 1&445\\
 10&2366\\
@@ -72,7 +72,7 @@ ilosc elementow & czas - nano sekundy\\
 \hline
 \multicolumn{2}{|c|}{powiększanie o jeden}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 1&481\\
 10&964\\
@@ -87,7 +87,7 @@ ilosc elementow & czas - nano sekundy\\
 \hline
 \multicolumn{2}{|c|}{powiększanie dwa razy}\\
 \hline
-ilosc elementow & czas - nano sekundy\\
+ilosc elementow & czas [ns]\\
 \hline
 1&119\\
 10&669\\
@@ -105,7 +105,7 @@ ilosc elementow & czas - nano sekundy\\
 \includegraphics[scale=0.55, angle=270]{wykresy/kolejka_x_dwa.eps}
 
 
-\section{Wnioski}
+\chapter{Wnioski}
 Powiększanie tablicy o jeden w obu wypadkach jest najgorszym rozwiązaniem z możliwych. W wariancie z powiększaniem o jeden element musiałem zmniejszyć liczbę danych o rząd ponieważ komputer nie mógł ukończyć tego programu - po dwudziestu minutach na siłę wyłączyłem program.
 Oba typy pojemników mają zbliżoną wydajność, jednak kolejka zdaje się działać szybciej. Jest to dla mnie dość dziwne ponieważ oba pojemniki są oparte o działającą w podobny sposób tablicę dynamiczną.
 
