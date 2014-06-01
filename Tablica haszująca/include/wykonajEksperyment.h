@@ -26,8 +26,8 @@ class wykonajEksperyment
 {
     enum TypFunkcji{WCZYTYWANIE, WYSZUKIWANIE};
     public:
-    const kolejkaCzyStos wyborPojemnika = WCZYTYWANIE;
-    const unsigned int  rozmiarTabIlosciDanych=5;
+    const TypFunkcji wyborPojemnika = WCZYTYWANIE;
+    const unsigned int  rozmiarTabIlosciDanych=3;
     const unsigned int liczbaWywolan=300;
     unsigned int *pTabIloscDanych;
     long double *pTabCzasyKolejnychSeriiDanych;

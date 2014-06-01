@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Lab5" />
+		<Option title="Tablica Asocjacyjna" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -34,9 +34,13 @@
 		</Compiler>
 		<Unit filename="include/Element.h" />
 		<Unit filename="include/TabblicaAsocjacyjna.h" />
+		<Unit filename="include/oblicz.h" />
+		<Unit filename="include/wykonajEksperyment.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Element.cpp" />
 		<Unit filename="src/TabblicaAsocjacyjna.cpp" />
+		<Unit filename="src/oblicz.cpp" />
+		<Unit filename="src/wykonajEksperyment.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -1,3 +1,5 @@
+#ifndef TABBLICAASOCJACYJNA_CPP
+#define TABBLICAASOCJACYJNA_CPP
 #include "../include/TabblicaAsocjacyjna.h"
 #include "../src/Element.cpp"
 #include <cmath>
@@ -5,18 +7,24 @@
 using namespace std;
 template<class TYP_KLUCZ, class TYP_WARTOSC>
 Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::Tablica_Haszujaca(unsigned long int liczba_elementow)
-{ const int tab_liczb_pierwszych[]={53, 97, 193, 389, 769, 1543, 3079, 6151, 12289, 24593, 49157, 98317,
+{
+    const unsigned long int tab_liczb_pierwszych[]={53, 97, 193, 389, 769, 1543, 3079, 6151, 12289, 24593, 49157, 98317,
                                     196613, 393241, 786433, 1572869, 3145739, 6291469, 12582917, 25165843,
                                     50331653, 100663319, 201326611, 402653189, 805306457, 1610612741 };
-    if(liczba_elementow>1610612741&&tablica_list.max_size()>=1610612741)
+    if(liczba_elementow>1610612741&&tablica_list.max_size() >1610612741)
         rozmiar_tablicy=1610612741;
     else
-    {
-        for(unsigned int i =0; liczba_elementow>tab_liczb_pierwszych[i]&&tablica_list.max_size()>=tab_liczb_pierwszych[i]; i++)
-            rozmiar_tablicy=tab_liczb_pierwszych[i];
+    {   rozmiar_tablicy=tab_liczb_pierwszych[0];
+        for(unsigned int i =0; liczba_elementow>tab_liczb_pierwszych[i]&&tablica_list.max_size() >tab_liczb_pierwszych[i+1]; i++)
+        {
+            rozmiar_tablicy=tab_liczb_pierwszych[i+1]; ///TODO(1#Adam#) poprawic zam maly rozmiar tablicy
+        }
     }
 
+    tablica_list.resize(rozmiar_tablicy);
+
 }
+
 template<class TYP_KLUCZ, class TYP_WARTOSC>
 Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::~Tablica_Haszujaca()
 {
@@ -85,3 +93,4 @@ int Tablica_Haszujaca<TYP_KLUCZ, TYP_WARTOSC>::ZliczElementy()
     return tablica_list.size();
 }
 //int Zlicz_Elementy();
+#endif

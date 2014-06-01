@@ -67,35 +67,48 @@
 	"../include/TabblicaAsocjacyjna.h"
 	"../src/Element.cpp"
 
-1401205711 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/Element.cpp
+1401578157 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/Element.cpp
 	"../include/Element.h"
 
-1401223059 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/Element.h
+1401257061 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/Element.h
 
-1401222994 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/TabblicaAsocjacyjna.cpp
+1401578375 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/TabblicaAsocjacyjna.cpp
 	"../include/TabblicaAsocjacyjna.h"
 	"../src/Element.cpp"
 	<cmath>
 	<cstring>
 
-1401220553 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/TabblicaAsocjacyjna.h
+1401257061 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/TabblicaAsocjacyjna.h
 	<list>
 	<vector>
 	<iostream>
 	"../include/Element.h"
 
-1401205711 /home/adam/Desktop/PAMSI2/Tablica haszująca/src/Element.cpp
+1401578157 /home/adam/Desktop/PAMSI2/Tablica haszująca/src/Element.cpp
 	"../include/Element.h"
 
-1401222808 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/main.cpp
+1401578082 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/main.cpp
 	<iostream>
 	"src/TabblicaAsocjacyjna.cpp"
 	"include/Element.h"
+	"include/wykonajEksperyment.h"
 	<string>
 
-1401222994 /home/adam/Desktop/PAMSI2/Tablica haszująca/src/TabblicaAsocjacyjna.cpp
+1401578375 /home/adam/Desktop/PAMSI2/Tablica haszująca/src/TabblicaAsocjacyjna.cpp
 	"../include/TabblicaAsocjacyjna.h"
 	"../src/Element.cpp"
 	<cmath>
 	<cstring>
+
+1401578296 source:/home/adam/Desktop/PAMSI2/Tablica haszująca/src/wykonajEksperyment.cpp
+	"../include/wykonajEksperyment.h"
+	<cmath>
+
+1401578401 /home/adam/Desktop/PAMSI2/Tablica haszująca/include/wykonajEksperyment.h
+	<iostream>
+	<fstream>
+	<string>
+	<chrono>
+	"../include/TabblicaAsocjacyjna.h"
+	"../src/TabblicaAsocjacyjna.cpp"
 

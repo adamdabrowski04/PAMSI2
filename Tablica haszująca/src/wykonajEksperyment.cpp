@@ -1,12 +1,12 @@
 #include "../include/wykonajEksperyment.h"
-
+#include<cmath>
 using namespace std;
 wykonajEksperyment::wykonajEksperyment()
 {
-    pTabCzasyKolejnychSeriiDanych=new  long double[rozmiarTabIlosciDanych];
+    pTabCzasyKolejnychSeriiDanych=new long double[rozmiarTabIlosciDanych];
     pTabIloscDanych= new unsigned  int[rozmiarTabIlosciDanych];
     for(unsigned int i=0;i<rozmiarTabIlosciDanych;i++)
-        pTabIloscDanych[i]=potega(10, i);
+        pTabIloscDanych[i]=pow(10, i);
 
 }
 
@@ -69,10 +69,11 @@ double wykonajEksperyment::zmierzCzasTrwania(unsigned int iloscDanych)
     switch(wyborPojemnika)
     {
     case WCZYTYWANIE:
-       uruchomKolejka(iloscDanych);
+       Wczytywanie(iloscDanych);
        break;
     case WYSZUKIWANIE:
-         uruchomStos(iloscDanych);
+         //uruchomStos(iloscDanych);
+         cout<<"Wybor pojemnika switch error"<<endl;
         break;
     default:
         cerr<<"Nie istnieje taka funkcja do sprawdzenia"<<endl;
@@ -83,16 +84,16 @@ double wykonajEksperyment::zmierzCzasTrwania(unsigned int iloscDanych)
     return czasTrwaniaObliczen.count();
 }
 
-void wykonajEksperyment::Wczytytwanie(unsigned int iloscDanych)
+void wykonajEksperyment::Wczytywanie(unsigned int iloscDanych)
 {
     ifstream StrmWe;
-    StrmWe.open("baza_danych.txt")
+    StrmWe.open("baza_danych.txt");
     string slowo;
-        Tablica_Haszujaca<string, int> slownik();
+        Tablica_Haszujaca<string, int> slownik(iloscDanych);
     for(unsigned int i=0; i<iloscDanych;i++)
     {
-        StrnWe>>slowo;
-        slownik.dodaj(slowo,i);
+        StrmWe>>slowo;
+        slownik.Dodaj(slowo,i);
     }
 
     StrmWe.close();
