@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1402982241 source:/home/adam/Desktop/PAMSI2/Simpleks/main.cpp
+	<iostream>
+	"include/Simpleks.h"
+
+1402984275 source:/home/adam/Desktop/PAMSI2/Simpleks/src/Simpleks.cpp
+	"../include/Simpleks.h"
+	<iostream>
+
+1402984275 /home/adam/Desktop/PAMSI2/Simpleks/include/Simpleks.h
+	<vector>
+
