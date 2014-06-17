@@ -1,8 +1,8 @@
 #ifndef SIMPLEKS_H
 #define SIMPLEKS_H
 #include<vector>
-  const int ROZMIAR_M=4;
-  const int ROZMIAR_N=4;
+  const int ROZMIAR_M=3;
+  const int ROZMIAR_N=3;
 class Simpleks
 {
   public:
